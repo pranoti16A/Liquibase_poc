@@ -9,7 +9,7 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
 
  
 
-    <include file="changelog sf.sql" relativeToChangelogFile="true"/>
+    <include file="Changelog sf.sql" relativeToChangelogFile="true"/>
 
 
  
