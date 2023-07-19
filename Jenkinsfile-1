@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Update') {
       steps {
-        sh 'liquibase update --url=jdbc:snowflake:https://byzriaf-wc40121.snowflakecomputing.com/?database=MY_DATABASE&schema=PUBLIC --changeLogFile=changelog sf.sql --username=Pranoti16 --password=HarPra1623@'
+        sh 'liquibase update --url=jdbc:snowflake:https://byzriaf-wc40121.snowflakecomputing.com/?database=MY_DATABASE&schema=PUBLIC --changeLogFile=changelogfile.xml --username=Pranoti16 --password=HarPra1623@'
       }
     }
   }
