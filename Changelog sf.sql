@@ -1,0 +1,10 @@
+
+create table EMPLOYEE
+(
+  EMPNO    NUMBER(4) not null,
+  ENAME    VARCHAR2(10),
+  MGR      NUMBER(4),
+  HIREDATE DATE,
+  SAL      NUMBER(7,2),
+  DEPTNAME VARCHAR2(10)
+)
