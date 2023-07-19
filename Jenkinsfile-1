@@ -8,7 +8,7 @@ pipeline {
     }
    stage('Status') {
       steps {
-        sh 'liquibase update changelogFile=changelog.xml, url=jdbc:snowflake:https://byzriaf-wc40121.snowflakecomputing.com/?database=MY_DATABASE, username=Pranoti16, password=HarPra1623@'
+        sh 'liquibase update --changelogFile=changelog.xml --url=jdbc:snowflake:https://byzriaf-wc40121.snowflakecomputing.com/?database=MY_DATABASE --username=Pranoti16 --password=HarPra1623@'
       }
     }
     stage('Update') {
