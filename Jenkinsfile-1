@@ -8,12 +8,12 @@ pipeline {
     }
    stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:mysql://192.168.32.11:3306/my_app" --changeLogFile=my_app-wrapper.xml --username=$MARIADB_CREDS_USR --password=$MARIADB_CREDS_PSW'
+        sh 'liquibase status --url="https://app.snowflake.com/byzriaf/wc40121/#/data/databases/MY_DATABASE" --changeLogFile=changelog sf.sql --username="Pranoti16" --password="HarPra1623@"'
       }
     }
     stage('Update') {
       steps {
-        sh 'liquibase update --url="jdbc:mysql://192.168.32.11:3306/my_app" --changeLogFile=my_app-wrapper.xml --username=$MARIADB_CREDS_USR --password=$MARIADB_CREDS_PSW'
+        sh 'liquibase update --url="https://app.snowflake.com/byzriaf/wc40121/#/data/databases/MY_DATABASE" --changeLogFile=changelog sf.sql --username="Pranoti16" --password="HarPra1623@"'
       }
     }
   }
