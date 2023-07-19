@@ -8,12 +8,12 @@ pipeline {
     }
    stage('Status') {
       steps {
-        sh 'liquibase status --url="https://byzriaf-wc40121.snowflakecomputing.com/console/login." --changeLogFile=changelog sf.sql --username="Pranoti16" --password="HarPra1623@"'
+        sh 'liquibase status --url=https://byzriaf-wc40121.snowflakecomputing.com/console/login. --changeLogFile=changelog sf.sql --username=Pranoti16 --password=HarPra1623@'
       }
     }
     stage('Update') {
       steps {
-        sh 'liquibase update --url="https://byzriaf-wc40121.snowflakecomputing.com/console/login." --changeLogFile=changelog sf.sql --username="Pranoti16" --password="HarPra1623@"'
+        sh 'liquibase update --url=https://byzriaf-wc40121.snowflakecomputing.com/console/login. --changeLogFile=changelog sf.sql --username=Pranoti16 --password=HarPra1623@'
       }
     }
   }
