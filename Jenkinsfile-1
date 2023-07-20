@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    USER_NAME="Pranoti16"
+    USER_NAME="Pranoti16 Ambare"
     PASSWORD="HarPra1623@"
               }
   stages {
