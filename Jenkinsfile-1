@@ -12,12 +12,12 @@ pipeline {
     }
    stage('Status') {
       steps {
-        sh "liquibase status --changelogFile=changelog.xml --url=jdbc:snowflake://byzriaf-wc40121.snowflakecomputing.com/?db=MY_DB&schema=public --username=${env.USER_NAME} --password=${env.PASSWORD}"
+        sh "liquibase status --changelogFile=changelog.xml --url=jdbc:snowflake:https://byzriaf-wc40121.snowflakecomputing.com/?database=MY_DB&schema=public --username=${env.USER_NAME} --password=${env.PASSWORD}"
       }
     }
     stage('Update') {
       steps {
-        sh "liquibase update --changelogFile=changelog.xml --url=jdbc:snowflake://byzriaf-wc40121.snowflakecomputing.com/?db=MY_DB&schema=public --username={env.USER_NAME} --password=${env.PASSWORD}"
+        sh "liquibase update --changelogFile=changelog.xml --url=jdbc:snowflake:https://byzriaf-wc40121.snowflakecomputing.com/?database=MY_DB&schema=public --username={env.USER_NAME} --password=${env.PASSWORD}"
       }
     }
   }
